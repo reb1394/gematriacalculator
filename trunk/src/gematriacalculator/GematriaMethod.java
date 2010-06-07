@@ -236,7 +236,7 @@ class GematriaMethodReduced implements GematriaMethod {
 		int i = 0;
 		for(char c : word) {
 			i += f.doReduce(f.getCharVal(c));
-     	}
+		}
 		return i;
 	}
 }
@@ -254,6 +254,43 @@ class GematriaMethodReducedSofit implements GematriaMethod {
 		for(char c : word) {
 			i += f.doReduce(f.getCharValSofit(c));
      	}
+		return i;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+class GematriaMethodIntegralReduced implements GematriaMethod {
+	public String getEnglishName()		{return "Integral Reduced";}
+	public String getHebrewName()		{return "מספר קטן מספרי";}
+	public String getDescription()		{return "Regular gematria, then all digits are added together till make single digit number";}
+
+	public int calc(char[] word) {
+		GematriaCommonFunctions f = new GematriaCommonFunctions();
+		int i = 0;
+		for(char c : word) {
+			i += f.getCharVal(c);
+     	}
+		i = f.doReduce(i);
+		return i;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+class GematriaMethodIntegralReducedSofit implements GematriaMethod {
+	public String getEnglishName()		{return "Integral Reduced (Sofit)";}
+	public String getHebrewName()		{return "מספר קטן מספרי - סופית";}
+	public String getDescription()		{return "Regular gematria (sofit version), then all digits are added together till make single digit number";}
+
+	public int calc(char[] word) {
+		GematriaCommonFunctions f = new GematriaCommonFunctions();
+		int i = 0;
+		for(char c : word) {
+			i += f.getCharValSofit(c);
+     	}
+		i = f.doReduce(i);
 		return i;
 	}
 }

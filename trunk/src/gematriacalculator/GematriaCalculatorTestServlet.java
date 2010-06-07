@@ -93,6 +93,19 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("חסד", 18);
         tester.doTest("חן", 15);
         
+        tester.method = new GematriaMethodIntegralReduced();
+        tester.doTest("מיכאל", 2);
+        tester.doTest("בית משיח", 5);
+        tester.doTest("חלב", 4);
+        tester.doTest("גבינה", 7);
+        tester.doTest("ציצית", 6);
+        tester.doTest("חסד", 9);
+        tester.doTest("חן", 4);
+        
+        tester.method = new GematriaMethodIntegralReducedSofit();
+        tester.doTest("חסד", 9);
+        tester.doTest("חן", 6);
+        
         // test common functions
         GematriaCommonFunctions f = new GematriaCommonFunctions();
         tester.doTest("doReduce(-5)",f.doReduce(-5),0);
