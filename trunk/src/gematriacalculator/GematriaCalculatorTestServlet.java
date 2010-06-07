@@ -55,56 +55,102 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         
         GematriaCalculatorTester tester = new GematriaCalculatorTester();
         tester.out = out;
-        
-        // Examples from:
-        // http://www.inner.org/gematria/gemexamp.php
               
         tester.method = new GematriaMethodAbsolute();
-        tester.doTest("מיכאל", 101);
-        tester.doTest("בית משיח", 770);
-        tester.doTest("חלב", 40);
-        tester.doTest("גבינה", 70);
-        tester.doTest("ציצית", 600);
-        tester.doTest("חסד", 72);
-        tester.doTest("חן", 58);
+        tester.doTest("חסד",72);
+        tester.doTest("חן",58);
+        tester.doTest("ירוממוך",322);
+        tester.doTest("סלה",95);
+        tester.doTest("המברך",267);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",806);
+        tester.doTest("ושאבתם",749);
+        tester.doTest("אומר",247);
+        tester.doTest("תקע בשופר",1158);
         
         tester.method = new GematriaMethodAbsoluteSofit();
-        tester.doTest("מיכאל", 101);
-        tester.doTest("בית משיח", 770);
-        tester.doTest("חלב", 40);
-        tester.doTest("גבינה", 70);
-        tester.doTest("ציצית", 600);
-        tester.doTest("חסד", 72);
-        tester.doTest("חן", 708);
+        tester.doTest("חסד",72);
+        tester.doTest("חן",708);
+        tester.doTest("ירוממוך",802);
+        tester.doTest("סלה",95);
+        tester.doTest("המברך",747);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",806);
+        tester.doTest("ושאבתם",1309);
+        tester.doTest("אומר",247);
+        tester.doTest("תקע בשופר",1158);
         
         tester.method = new GematriaMethodOrdinal();
-        tester.doTest("חסד", 27);
-        tester.doTest("חן", 22);
+        tester.doTest("חסד",27);
+        tester.doTest("חן",22);
+        tester.doTest("ירוממוך",79);
+        tester.doTest("סלה",32);
+        tester.doTest("המברך",51);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",77);
+        tester.doTest("ושאבתם",65);
+        tester.doTest("אומר",40);
+        tester.doTest("תקע בשופר",123);
         
         tester.method = new GematriaMethodOrdinalSofit();
-        tester.doTest("חסד", 27);
-        tester.doTest("חן", 33);
+        tester.doTest("חסד",27);
+        tester.doTest("חן",33);
+        tester.doTest("ירוממוך",91);
+        tester.doTest("סלה",32);
+        tester.doTest("המברך",63);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",77);
+        tester.doTest("ושאבתם",76);
+        tester.doTest("אומר",40);
+        tester.doTest("תקע בשופר",123);
         
         tester.method = new GematriaMethodReduced();
-        tester.doTest("חסד", 18);
-        tester.doTest("חן", 13);
+        tester.doTest("חסד",18);
+        tester.doTest("חן",13);
+        tester.doTest("ירוממוך",25);
+        tester.doTest("סלה",14);
+        tester.doTest("המברך",15);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",23);
+        tester.doTest("ושאבתם",20);
+        tester.doTest("אומר",13);
+        tester.doTest("תקע בשופר",33);
         
         tester.method = new GematriaMethodReducedSofit();
-        tester.doTest("חסד", 18);
-        tester.doTest("חן", 15);
+        tester.doTest("חסד",18);
+        tester.doTest("חן",15);
+        tester.doTest("ירוממוך",28);
+        tester.doTest("סלה",14);
+        tester.doTest("המברך",18);
+        tester.doTest("בטובו",25);
+        tester.doTest("לעשות",23);
+        tester.doTest("ושאבתם",22);
+        tester.doTest("אומר",13);
+        tester.doTest("תקע בשופר",33);
         
         tester.method = new GematriaMethodIntegralReduced();
-        tester.doTest("מיכאל", 2);
-        tester.doTest("בית משיח", 5);
-        tester.doTest("חלב", 4);
-        tester.doTest("גבינה", 7);
-        tester.doTest("ציצית", 6);
-        tester.doTest("חסד", 9);
-        tester.doTest("חן", 4);
+        tester.doTest("חסד",9);
+        tester.doTest("חן",4);
+        tester.doTest("ירוממוך",7);
+        tester.doTest("סלה",5);
+        tester.doTest("המברך",6);
+        tester.doTest("בטובו",7);
+        tester.doTest("לעשות",5);
+        tester.doTest("ושאבתם",2);
+        tester.doTest("אומר",4);
+        tester.doTest("תקע בשופר",6);
         
         tester.method = new GematriaMethodIntegralReducedSofit();
-        tester.doTest("חסד", 9);
-        tester.doTest("חן", 6);
+        tester.doTest("חסד",9);
+        tester.doTest("חן",6);
+        tester.doTest("ירוממוך",1);
+        tester.doTest("סלה",5);
+        tester.doTest("המברך",9);
+        tester.doTest("בטובו",7);
+        tester.doTest("לעשות",5);
+        tester.doTest("ושאבתם",4);
+        tester.doTest("אומר",4);
+        tester.doTest("תקע בשופר",6);
         
         // test common functions
         GematriaCommonFunctions f = new GematriaCommonFunctions();
