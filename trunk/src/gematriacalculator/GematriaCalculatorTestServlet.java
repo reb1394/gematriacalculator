@@ -56,7 +56,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         GematriaCalculatorTester tester = new GematriaCalculatorTester();
         tester.out = out;
               
-        tester.method = new GematriaMethodAbsolute();
+        tester.method = new GematriaMethodAbsolute();        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",72);
         tester.doTest("חן",58);
         tester.doTest("ירוממוך",322);
@@ -69,6 +73,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",1158);
         
         tester.method = new GematriaMethodAbsoluteSofit();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",72);
         tester.doTest("חן",708);
         tester.doTest("ירוממוך",802);
@@ -81,6 +90,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",1158);
         
         tester.method = new GematriaMethodOrdinal();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",27);
         tester.doTest("חן",22);
         tester.doTest("ירוממוך",79);
@@ -93,6 +107,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",123);
         
         tester.method = new GematriaMethodOrdinalSofit();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",27);
         tester.doTest("חן",33);
         tester.doTest("ירוממוך",91);
@@ -105,6 +124,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",123);
         
         tester.method = new GematriaMethodReduced();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",18);
         tester.doTest("חן",13);
         tester.doTest("ירוממוך",25);
@@ -117,6 +141,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",33);
         
         tester.method = new GematriaMethodReducedSofit();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",18);
         tester.doTest("חן",15);
         tester.doTest("ירוממוך",28);
@@ -129,6 +158,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",33);
         
         tester.method = new GematriaMethodIntegralReduced();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",9);
         tester.doTest("חן",4);
         tester.doTest("ירוממוך",7);
@@ -141,6 +175,11 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("תקע בשופר",6);
         
         tester.method = new GematriaMethodIntegralReducedSofit();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",3);
         tester.doTest("חסד",9);
         tester.doTest("חן",6);
         tester.doTest("ירוממוך",1);
@@ -151,6 +190,57 @@ public class GematriaCalculatorTestServlet extends HttpServlet {
         tester.doTest("ושאבתם",4);
         tester.doTest("אומר",4);
         tester.doTest("תקע בשופר",6);
+        
+        tester.method = new GematriaMethodAtbash();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",1200);
+        tester.doTest("חסד",168);
+        tester.doTest("חן",69);
+        tester.doTest("ירוממוך",253);
+        tester.doTest("סלה",118);
+        tester.doTest("המברך",433);
+        tester.doTest("בטובו",810);
+        tester.doTest("לעשות",110);
+        tester.doTest("ושאבתם",793);
+        tester.doTest("אומר",493);
+        tester.doTest("תקע בשופר",403);
+        
+        tester.method = new GematriaMethodAlbam();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",90);
+        tester.doTest("חסד",164);
+        tester.doTest("חן",103);
+        tester.doTest("ירוממוך",873);
+        tester.doTest("סלה",75);
+        tester.doTest("המברך",521);
+        tester.doTest("בטובו",440);
+        tester.doTest("לעשות",116);
+        tester.doTest("ושאבתם",182);
+        tester.doTest("אומר",121);
+        tester.doTest("תקע בשופר",178);
+
+        tester.method = new GematriaMethodAvgad();
+        tester.doTest("",0);
+        tester.doTest("   ",0);
+        tester.doTest("blablabla",0);
+        tester.doTest("%)*Q#)ASF*&%",0);
+        tester.doTest("askאfjbasfkאjbא",6);
+        tester.doTest("חסד",84);
+        tester.doTest("חן",69);
+        tester.doTest("ירוממוך",464);
+        tester.doTest("סלה",116);
+        tester.doTest("המברך",389);
+        tester.doTest("בטובו",30);
+        tester.doTest("לעשות",528);
+        tester.doTest("ושאבתם",463);
+        tester.doTest("אומר",359);
+        tester.doTest("תקע בשופר",1081);
         
         // test common functions
         GematriaCommonFunctions f = new GematriaCommonFunctions();
