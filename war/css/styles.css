@@ -14,10 +14,10 @@ h3 {font-size:110%;}
 a:link {color:#000080;}
 a:hover {color:red;}
 
-table
-{
-	font-family: Arial;
-	font-size: 10pt;
+#vk {
+    font-family: font-family: FrankRuehl;
+    font-size: 10pt;
+	direction: rtl;
 }
 
 .kbTitle
