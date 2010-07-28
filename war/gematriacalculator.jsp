@@ -4,7 +4,6 @@
 <%@ page import="javax.servlet.http.*" %>
 <%@ page import="gematriacalculator.*" %>
 
-<%!	GematriaCalculator g = new GematriaCalculator(); %>
 <%
 	String word = request.getParameter("word");
 	if(word == null) word = "";
@@ -76,16 +75,22 @@ Please enter the text to calculate below:
     </tr> 
 </table>
 
-<%
-	if(word != "") {
-		// Display results
-        
-        char[] wordChar = word.toCharArray();
-        for(GematriaMethod m : g.methods) {
-        	out.println("<br>" + m.getEnglishName() + " = " + m.calc(wordChar));
-        }
+
+<% if(word != "") {
+	GematriaResult res = new GematriaResult(word);
+	
+	out.println("<h2> Gematria Results </h2>");
+	out.println("<ul>");
+	for(GematriaResultType r : res.results) {
+		out.println("<li title='" + r.description + "'>" + r.name + " = " + r.value);
+		if(r.hasSofit)
+			out.println(" (" + r.valueSofit + ")");
+		out.println("</li>");
 	}
-%>
+	out.println("</ul>");
+	out.println("Numbers in brackets are calculated using seperate values for sofit letters.</p>");
+	out.println("Place your mouse over any result for more details.</p>");
+} %>
 
 <p><a href="/test">Test Suite</a></p>
 
