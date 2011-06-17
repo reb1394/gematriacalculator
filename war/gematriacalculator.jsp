@@ -5,6 +5,7 @@
 <%@ page import="gematriacalculator.*" %>
 
 <%
+	// test commit
 	String word = request.getParameter("word");
 	if(word == null) word = "";
 %>
